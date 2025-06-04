@@ -17,7 +17,7 @@ The full dataset includes:
 2. Organize the data in the following structure:
 ```
 data/
-├── Silver_Pomfret/
+├── Pomfret/
 │   ├── 1/          # 0° polarization images
 │   │   ├── 1.bmp
 │   │   ├── 2.bmp
@@ -25,68 +25,15 @@ data/
 │   ├── 2/          # 45° polarization images
 │   ├── 3/          # 90° polarization images
 │   └── 4/          # 135° polarization images
-├── conch/
+├── Conch/
 │   ├── 1/
 │   ├── 2/
 │   ├── 3/
 │   └── 4/
-├── stone/
+├── Stone/
 │   ├── 1/
 │   ├── 2/
 │   ├── 3/
 │   └── 4/
 └── ...             # other objects
 
-### Running the UTR-Net
-To process images through our Underwater Turbidity Removal Network:
-```python
-from models.utr_net import UTRNet
-
-model = UTRNet()
-model.load_weights('weights/utr_net_weights.h5')
-
-# Process a batch of polarization images
-cleaned_images = model.predict([img_0deg, img_45deg, img_90deg, img_135deg])
-```
-
-### 3D Reconstruction
-To perform full 3D reconstruction:
-```python
-from reconstruction.pipeline import StructuredLightReconstructor
-
-reconstructor = StructuredLightReconstructor()
-point_cloud = reconstructor.reconstruct(cleaned_images)
-```
-
-## System Architecture
-Our polarized structured light system consists of:
-1. A digital projector with polarizer
-2. A division-of-focal-plane polarization camera
-3. Our UTR-Net with:
-   - Fringe Capture Block (FCB) for local feature extraction
-   - Global Contour Capture Block (GCCB) for object edge detection
-
-## Results
-Our method demonstrates significant improvements over state-of-the-art methods in:
-- Reconstruction accuracy (reduced RMSE by 37%)
-- Edge preservation in turbid conditions
-- Computational efficiency
-
-Sample results are available in the `results/` directory.
-
-## Citation
-If you use this work in your research, please cite our paper:
-```bibtex
-@article{underwater2024,
-  title={Underwater 3D Structured Light Reconstruction with Polarization Imaging},
-  author={Your Name, Coauthors},
-  journal={Journal Name},
-  year={2024}
-}
-```
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-For questions or collaborations, please contact: your.email@institution.edu
