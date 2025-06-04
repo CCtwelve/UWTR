@@ -1,23 +1,14 @@
-# Underwater 3D Structured Light Reconstruction with Polarization Imaging
+# High-Precision Underwater Turbidity Removal for 3D Structured Light Reconstruction Using Division-of-Focal-Plane Polarization
 
 ## Overview
 This repository contains the implementation of our novel underwater 3D reconstruction system that combines temporal-multiplexing structured light with polarization imaging to achieve accurate reconstruction in turbid underwater environments. Our method addresses the challenges posed by suspended particles in water that degrade traditional image-based 3D reconstruction methods.
-
-Key features:
-- Polarized structured light system for robust underwater imaging
-- Underwater Turbidity Removal Network (UTR-Net) for enhanced image quality
-- Comprehensive dataset of 300 underwater objects (648,000 high-res images)
-- State-of-the-art reconstruction accuracy in turbid conditions
 
 ## Dataset
 We provide a sample dataset captured using our polarization imaging system:
 [Download Dataset Sample](https://drive.google.com/file/d/1QpZIhsUIWLAgQCXWXdj865gSNkjpCRrd/view?usp=drive_link)
 
 The full dataset includes:
-- 300 different underwater objects
 - Images captured at 4 polarization angles (0°, 45°, 90°, 135°)
-- Corresponding second Stokes parameter (S₂) and Degree of Polarization (DoP) maps
-- Ground truth 3D models for evaluation
 
 ## Installation
 1. Clone this repository:
