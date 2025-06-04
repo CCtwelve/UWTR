@@ -37,3 +37,10 @@ data/
 │   └── 4/
 └── ...             # other objects
 
+Here's the updated GitHub README section that clearly explains the code availability status and future release plans:
+
+## Code Availability
+### Release Plan:
+- We will open-source the complete codebase upon paper acceptance
+
+
