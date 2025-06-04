@@ -8,19 +8,8 @@ We provide a sample dataset captured using our polarization imaging system:
 [Download Dataset Sample](https://drive.google.com/file/d/1QpZIhsUIWLAgQCXWXdj865gSNkjpCRrd/view?usp=drive_link)
 
 The full dataset includes:
+- various different underwater objects
 - Images captured at 4 polarization angles (0°, 45°, 90°, 135°)
-
-## Installation
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/underwater-3d-reconstruction.git
-cd underwater-3d-reconstruction
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
 
 ## Usage
 ### Data Preparation
@@ -28,16 +17,25 @@ pip install -r requirements.txt
 2. Organize the data in the following structure:
 ```
 data/
-├── raw_images/
-│   ├── object_001/
-│   │   ├── 0deg.png
-│   │   ├── 45deg.png
-│   │   ├── 90deg.png
-│   │   └── 135deg.png
-│   └── ...
-├── stokes_maps/
-└── dop_maps/
-```
+├── Silver_Pomfret/
+│   ├── 1/          # 0° polarization images
+│   │   ├── 1.bmp
+│   │   ├── 2.bmp
+│   │   └── ...     # up to 18.bmp
+│   ├── 2/          # 45° polarization images
+│   ├── 3/          # 90° polarization images
+│   └── 4/          # 135° polarization images
+├── conch/
+│   ├── 1/
+│   ├── 2/
+│   ├── 3/
+│   └── 4/
+├── stone/
+│   ├── 1/
+│   ├── 2/
+│   ├── 3/
+│   └── 4/
+└── ...             # other objects
 
 ### Running the UTR-Net
 To process images through our Underwater Turbidity Removal Network:
