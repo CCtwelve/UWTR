@@ -5,7 +5,7 @@ This repository contains the implementation of our novel underwater 3D reconstru
 
 ## Dataset
 We provide a sample dataset captured using our polarization imaging system:
-[Download Dataset Sample](https://drive.google.com/file/d/1TokaY8xNXhKi0-o2QtHfRm3_C8setTtw/view?usp=sharing)
+[Download Dataset Sample](https://drive.google.com/drive/folders/1_QtpBCeuhCcSC7m91gKtxH-SGLaDRBOP?usp=drive_link)
 
 The full dataset includes:
 - various different underwater objects
